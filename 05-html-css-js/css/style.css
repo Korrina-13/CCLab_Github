@@ -1,0 +1,26 @@
+html, body {
+	height: 100%;
+  width: 100%;
+	margin: 0 auto;
+}
+
+body {
+	font-family: "Helvetica";
+	background-color: #606060;
+	background-image: url(backPatt2.png);
+	color: black;
+	/* mix-blend-mode: darken; */
+}
+
+.pattern {
+	position: absolute;
+	top: 150px;
+	display: inline-grid;
+	grid-gap: 80px;
+	width: 100%;
+	grid-template-columns: 100px 100px 100px 100px;
+	grid-template-rows: 100px 100px 100px 100px;
+	align-items: center;
+	justify-content: space-around;
+	opacity: 0.5;
+}

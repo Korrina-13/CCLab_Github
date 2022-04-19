@@ -1,0 +1,71 @@
+/* https://alligator.io/css/exploring-blend-modes/ */
+
+html, body {
+	height: 100%;
+  width: 100%;
+	margin: 0 auto;
+}
+
+body {
+	font-family: "Helvetica";
+	background-color: #606060;
+	color: black;
+}
+
+.fixed-HeadL {
+	position: fixed;
+	left: 15px;
+	top: 60px;
+}
+
+.absolute-HeadR {
+	position: absolute;
+	right: 21px;
+	top: 60px;
+}
+
+.eyeL {
+	position: fixed;
+	left: 2px;
+	top: 172px;
+	transform: scale(0.06);
+	opacity: 0.8;
+}
+
+.eyeR {
+	position: absolute;
+	right: 7px;
+	top: 162px;
+	transform: scale(0.06);
+	opacity: 0.8;
+}
+
+.glassesL {
+	position: fixed;
+	left: 128px;
+	top: 310px;
+	transform: rotate3d(0,1,0,0deg);
+	transition: 1s ease-in;
+}
+.glassesL:hover {
+	transform: rotate3d(0,1,0,70deg) translateX(-40px);
+}
+
+.glassesR {
+	position: absolute;
+	right: 145px;
+	top: 310px;
+	transform: rotate3d(0,1,0,0deg);
+	transition: 1s ease-in;
+}
+.glassesR:hover {
+	transform: rotate3d(0,1,0,70deg) translateX(60px);
+}
+
+@-webkit-keyframes rotation {
+	from {
+		-webkit-transform: rotate(0deg);
+	} to {
+		-webkit-transform: rotate(359deg);
+		}
+}
