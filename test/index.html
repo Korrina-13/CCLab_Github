@@ -1,0 +1,15 @@
+function setup() {
+    createCanvas(1200, 2000);
+  
+    
+  }
+  
+  function draw() {
+    console.log(window.scrollY);
+    colorMode(HSB);
+    background(100, window.scrollY % 50, 500);
+  }
+  
+  function mousePressed(){
+    window.scrollBy(0,200);
+  }

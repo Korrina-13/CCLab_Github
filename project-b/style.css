@@ -1,0 +1,47 @@
+html, body {
+  margin: 10;
+  padding: 10;
+}
+/* 
+body{
+  height: 1500px;
+  width: 1500px;
+}
+canvas {
+  display: block;
+  position: center;
+} */
+
+.buttonLook {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: brown;
+  color:blanchedalmond;
+  border-radius: 10px;
+  line-height: 30px;
+  width: 150px;
+}
+
+.memeImg {
+  width: 600px;
+  justify-content: center;
+}
+
+#textDiv{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  border: 3px solid;
+  border-radius: 25px;
+  padding: 10px;
+  background-color:pink;
+  text-align: center;
+}
+
+#nameDiv{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  border: 3px solid;
+  /* width: min-content;
+  height: fit-content; */
+  border-radius: 25px;
+  padding: 10px;
+  background-color:burlywood;
+  text-align: center;
+}
