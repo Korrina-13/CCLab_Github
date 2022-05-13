@@ -10,15 +10,15 @@ let gifs = []; //Class instances
 let counter = 0;
 let boolCheck = true;
 
-function setup() {
-  createCanvas(windowWidth, windowHeight);
-  }
-  
 function preload(){
     let searchWord = "color";
     let fullURL = apiUrl +searchWord+ apiKey;
     loadJSON(fullURL, giphyLoaded);
 }
+
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+  }
 
   // this communicates with the HTML and allows me to be able to change the text based on the users response
 document.getElementById("myButton").onclick = function(){
@@ -26,12 +26,20 @@ document.getElementById("myButton").onclick = function(){
   console.log(colorChoice);
   document.getElementById("myLabelThree").innerHTML = colorChoice + "...interesting...";
   document.getElementById("commentThree").innerHTML = colorChoice + "? Not bad, still doesn't change that this website is useless";
+
+  noLoop();
+  counter = 0;
+
+  let searchWord = colorChoice;
+  let fullURL = apiUrl +searchWord+ apiKey;
+  loadJSON(fullURL, giphyLoaded);
 }
 
 function giphyLoaded(respObj) {
   let getRandom = parseInt(random(20));
   getGif = loadImage(respObj.data[getRandom].images.original.url);
-  //console.log(getGif);
+  loop();
+  //console.log(respObj);
 }
 
 function runGif(){
@@ -93,4 +101,3 @@ function cloneGif(gif, startFrame){
 function windowResized() {
 	resizeCanvas(windowWidth, windowHeight);
 }
-

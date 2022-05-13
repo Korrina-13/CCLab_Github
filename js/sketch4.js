@@ -13,7 +13,7 @@ let boolCheck = true;
 function setup() {
   createCanvas(windowWidth, windowHeight);
   }
-  
+
 function preload(){
     let searchWord = "food";
     let fullURL = apiUrl +searchWord+ apiKey;
@@ -23,15 +23,28 @@ function preload(){
  // this communicates with the HTML and allows me to be able to change the text based on the users response
 document.getElementById("myButton").onclick = function(){
   food = document.getElementById("myText").value;
-  console.log(food);
+  //console.log(food);
   document.getElementById("myLabelFour").innerHTML = food + "...alright alright";
   document.getElementById("commentFour").innerHTML = "You " + food + " lover. You never learn.";
+
+  noLoop();
+  counter = 0;
+
+  let searchWord = food;
+  let fullURL = apiUrl +searchWord+ apiKey;
+  loadJSON(fullURL, giphyLoadedNew);
 }
 
 function giphyLoaded(respObj) {
   let getRandom = parseInt(random(20));
   getGif = loadImage(respObj.data[getRandom].images.original.url);
-  //console.log(getGif);
+}
+
+function giphyLoadedNew(respObj) {
+  let getRandom = parseInt(random(20));
+  getGif = loadImage(respObj.data[getRandom].images.original.url);
+  //console.log(respObj);
+  loop();
 }
 
 function runGif(){
@@ -49,7 +62,7 @@ function draw(){
   if (gifs!=null){
     //Visualize the GIFs
     for (let i = 0; i < gifs.length; i++){
-      gifs[i].update();
+      gifs[gifs.length-1].update();
     }
   }
 }

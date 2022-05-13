@@ -27,6 +27,12 @@ document.getElementById("myButton").onclick = function(){
   document.getElementById("comment").innerHTML = "I'm not joking " + username + ", it's useless";
 }
 
+document.getElementById("myButton").onclick = function(){
+  username = document.getElementById("myText").value;
+  document.getElementById("myLabel").innerHTML = "Hello " + username;
+  document.getElementById("comment").innerHTML = "I'm not joking " + username + ", it's useless";
+}
+
 function giphyLoaded(respObj) {
   let getRandom = parseInt(random(20));
   getGif = loadImage(respObj.data[getRandom].images.original.url);

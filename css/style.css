@@ -12,26 +12,34 @@ html, body {
 
 /* where the text is placed */
 .container {
-  border: 0 px solid black;
-  display: flex;
-  margin: 0 auto;
-  top: 50%;
-  width: 100%;
-  text-align: center;
-  justify-content: space-between;
-  align-content: align;
+  border: 0px solid black;
+    display: flex;
+    flex-direction: column;
+    /*background-color: grey;*/
+    margin: 20px 40px;
 }
 
 #textDiv {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   padding: 20px;
-  margin: 20px 20px; 
+  margin: 0px;
   border: 3px solid;
   border-radius: 25px;
   background-image: linear-gradient(to right, pink , purple, cyan);
   text-align: center;
   height: 25%;
-  width:100%;
+  width:calc(100%-20px);
+}
+
+#myLabel {
+  margin: 20px;
+  padding: 20px;
+}
+
+#myText {
+  margin: 10px;
+  padding: 5px;
+  width: 20%;
 }
 
 /* only effects textDiv */
@@ -42,23 +50,26 @@ h1 {
 
 p {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  color: white
+  color: white;
+  margin: 10px;
 }
 
 #nameDiv{
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  padding: 20px;
-  margin: 80px 80px; 
   border: 3px solid;
   border-radius: 25px;
   background-image: linear-gradient(to right, cyan , purple, pink);
   text-align: center;
+  padding: 20px;
+  margin: 0px;
+  text-align: center;
   height: 25%;
-  width:80%;
+  width:calc(100%-20px);
 }
 
 /* Everything below is what makes the cool CSS button ref: https://getcssscan.com/css-buttons-examples */
 .button-85 {
+  margin: 10px;
   padding: 0.6em 2em;
   border: none;
   outline: none;
